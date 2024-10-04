@@ -23,11 +23,9 @@ body {
   background-color: white;
   z-index: 1;
 }
-
 .navbar__s1__title {
   color: #A435F0;
 }
-
 .navbar__s2 {
   padding: 10px;
   border: solid black 1px;
@@ -37,22 +35,22 @@ body {
   gap: 10px;
   align-items: center;
 }
-
 .navbar__s2 input {
   border: none;
   font-size: 16px;
   width: 100%;
   background-color: transparent;
 }
-
 .navbar__s2 input:focus {
   outline: none;
 }
-
 .navbar__s3 {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.navbar__s4{
+  display: none;
 }
 /*My Learning*/
 .mylearning{
@@ -81,7 +79,6 @@ body {
   border-bottom: solid black 1px;
   padding: 10px;
 }
-
 .Categories p {
   background-color: #A435F0;
   padding: 10px;
@@ -135,18 +132,17 @@ body {
 .recomended {
   padding: 10px;
 }
-
 .recomended__container {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   flex-wrap: wrap;
 }
-
 .course-card {
-  width: 300px;
+  flex-basis: 20%;
+  flex-grow: 1;
+  margin: 5px;
 }
-
 .course-card img {
   width: 100%;
   height: 50%;
@@ -157,14 +153,12 @@ body {
 .topics {
   padding: 10px;
 }
-
 .topics__container {
   display: flex;
   gap: 10px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
-
 .topics__container p {
   border: solid gray 1px;
   padding: 10px;
@@ -176,7 +170,6 @@ body {
 .popular {
   padding: 10px;
 }
-
 .popular__container {
   display: flex;
   justify-content: space-between;
@@ -190,19 +183,40 @@ body {
   color: white;
   padding: 30px;
 }
-
 .footer__one {
   display: flex;
   gap: 10px;
 }
-
 .footer__one p {
   margin: 20px;
 }
-
 .footer__two {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+}
+
+
+/* MEDEIA QUARY */
+@media screen and (max-width:800px) {
+  body{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .course-card{
+    flex-basis: 40%;
+  }
+  .Categories{
+    display: none;
+  }
+  .navbar__s2,.navbar__s3{
+    display: none;
+  }
+  .navbar__s4{
+    display: block;
+    font-size: 16px;
+  }
 }
